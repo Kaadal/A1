@@ -57,17 +57,17 @@ function showWinner() {
 }
 
 function updateScoreboard() {
-  // Update the scores based on the result of the roll
   if (playerRoll > aiRoll) {
     playerScore++;
+    scoreboardPlayer.innerText = "Player Score: " + playerScore;
   } else if (playerRoll < aiRoll) {
     aiScore++;
+    scoreboardAi.innerText = "AI Score: " + aiScore;
   } else {
     ties++;
+    scoreboardDraw.innerText = "Draws: " + ties;
   }
 
-  // Update the text on the scoreboard
-  scoreboardPlayer.innerText = "Player Score: " + playerScore;
-  scoreboardAi.innerText = "AI Score: " + aiScore;
-  scoreboardDraw.innerText = "Draws: " + ties;
+
 }
+
